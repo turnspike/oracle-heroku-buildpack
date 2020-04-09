@@ -24,7 +24,8 @@ indent "Making directory #{BUILD_DIR}/#{ORACLE_INSTANT_CLIENT_DIR}"
 `mkdir -p #{BUILD_DIR}/#{ORACLE_INSTANT_CLIENT_DIR}`
 
 indent "Downloading and extracting #{ORACLE_INSTANT_CLIENT_FILENAME}"
-result = `curl #{ORACLE_INSTANT_CLIENT_URL} -L -s -o - | unzip -xvz -C #{BUILD_DIR}/#{ORACLE_INSTANT_CLIENT_DIR} -f - `
+#result = `curl #{ORACLE_INSTANT_CLIENT_URL} -L -s -o - | unzip -xvz -C #{BUILD_DIR}/#{ORACLE_INSTANT_CLIENT_DIR} -f - `
+result = `curl #{ORACLE_INSTANT_CLIENT_URL} -L -s -o - | tar -xvz -C #{BUILD_DIR}/#{ORACLE_INSTANT_CLIENT_DIR} -f - `
 
 unless $?.success?
   indent "Failure while downloading Oracle instant client archive: #{$?}"
