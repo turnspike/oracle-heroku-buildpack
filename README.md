@@ -32,7 +32,7 @@ Heroku natively also support's multiple buildpacks, the same setup as above can 
 
     heroku buildpacks:clear
     heroku buildpacks:set https://github.com/heroku/heroku-buildpack-ruby
-    heroku buildpacks:add --index 1 https://github.com/ddollar/heroku-buildpack-multi
+    heroku buildpacks:add --index 1 https://github.com/turnspike/oracle-heroku-buildpack
 
 
 # Configuration (Optional)
